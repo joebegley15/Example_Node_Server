@@ -1,7 +1,11 @@
+// Load Requirements
 var http = require('http');
-var portNum = 8080;
 var fs = require('fs');
+var express = require('express');
+
+var portNum = 8080;
 var index = fs.readFileSync('index.html');
+
 
 http.createServer(function(request,response){
 	response.writeHead(200, {'Content-Type': 'html'});
